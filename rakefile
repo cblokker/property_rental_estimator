@@ -1,0 +1,16 @@
+require './app'
+require 'sinatra/activerecord/rake'
+require './db/seeds'
+
+
+namespace :db do
+  desc "Migrate the database"
+  task :seed_base_data do
+    seed_base_data
+  end
+
+  desc "Migrate the database"
+  task :initialize_regression_data do
+    initialize_regression_data
+  end
+end
